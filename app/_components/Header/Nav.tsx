@@ -7,6 +7,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import CancelSVG from "@/app/_assets/CancelSVG";
+import User_Menu from "./User_Menu";
 
 const NavLinks = [
   { href: "/", text: "home" },
@@ -14,7 +15,7 @@ const NavLinks = [
   { href: "/link_3", text: "link3" },
 ];
 
-export default function Nav() {
+export default function Nav({user}:{user: {username: string, image: string}}) {
 
   const [show, setShow] = useState<boolean>(false)
   const pathname = usePathname()
@@ -31,7 +32,7 @@ export default function Nav() {
             ))
           }
 
-          <Theme_Toggler />
+          <User_Menu user={user}/>
 
         </nav>
 
