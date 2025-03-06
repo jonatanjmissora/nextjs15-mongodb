@@ -15,8 +15,7 @@
   --hover-primary: #193cb8;
   --color-secondary: #ac6a75;
   --hover-secondary: #864751;
-  --color-link-active: #193cb8;
-  --color-link-hover: #155dfc;
+  --color-link-active: #155dfc;
   --black: #222;
   --white: #eee;
 }
@@ -25,7 +24,7 @@
   --inset1: -2px -2px 2px rgba(10, 10, 10, 0.75);
   --inset2: 2px 2px 2px rgba(80, 80, 80, 0.25);
   --background: linear-gradient(125deg, #111, #333);
-  --card-background: linear-gradient(125deg, #222, #000);
+  --card-background: linear-gradient(125deg, #393939aa, #191919aa);
   --foreground: #ededed;
 }
 
@@ -85,7 +84,7 @@ body {
   }
 
   .link {
-    @apply font-bold px-4 py-0 tracking-widest cursor-pointer hover:text-[var(--color-link-hover)] transition-colors duration-300 text-xl sm:text-sm 2xl:text-xl
+    @apply font-bold px-4 py-0 tracking-widest cursor-pointer hover:text-[var(--hover-primary)] transition-colors duration-300 text-xl sm:text-sm 2xl:text-xl
   }
 
   .link.active {
@@ -94,5 +93,9 @@ body {
 
   .card {
     @apply flex flex-col items-center justify-center p-12 sm:p-6 2xl:p-12 rounded-lg w-[95%] sm:w-[17rem] 2xl:w-[25rem] gap-12 sm:gap-6 2xl:gap-12
+  }
+
+  .hover {
+    @apply hover:text-[var(--hover-primary)] transition-colors duration-300
   }
 }
